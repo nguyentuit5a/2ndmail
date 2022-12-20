@@ -1,0 +1,16 @@
+const express = require('express')
+const { account, index, message, mailbox, read, xoathu } = require('../app/controllers/Site')
+const { verifyToken } = require('../app/middlewares/verifyToken')
+const indexApi = require('../app/controllers/Api')
+const { deleteOne } = require('../app/models/Domain')
+const router = express.Router()
+router.get('/mailbox', verifyToken, mailbox)
+router.get('/message/:id', verifyToken, message)
+router.get('/account', account)
+router.get('/read/:id', read)
+router.get('/xoathu/:id', xoathu)
+router.get('/api', indexApi.index)
+router.get('/domains', indexApi.getDomain)
+router.get('/', index)
+    
+module.exports = router

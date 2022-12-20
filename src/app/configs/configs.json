@@ -1,0 +1,7 @@
+{
+    "mongodb_url": "cluster0.yu80u.mongodb.net",
+    "mongodb_user": "admin",
+    "mongodb_passwd": "nvt@24101990",
+    "mongodb_db": "?retryWrites=true&w=majority",
+    "access_token_secret": "2ndmailxxx"
+}
